@@ -5,7 +5,7 @@
     "module": "commonjs",
     "strict": true,
     "noImplicitAny": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "removeComments": true,
     "noEmitOnError": true,
     "esModuleInterop": true,

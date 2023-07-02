@@ -12,10 +12,10 @@
   "main": "NoCookieWithoutConsent.module.php",
   "scripts": {
     "tsc": "tsc --watch",
-    "sass": "sass --watch --stop-on-error --no-source-map source/sass:css",
+    "sass": "sass --watch --stop-on-error source/sass:css",
     "dev": "start /MIN npm run tsc && start /MIN npm run sass",
-    "minify-js": "npx esbuild js/nocowoco.js --outdir=js --no-source-map --minify --allow-overwrite",
-    "build": "npx sass --no-source-map --style=compressed source/sass:css & npx tsc & npx esbuild js/nocowoco.js --outdir=js --minify --allow-overwrite"
+    "minify-js": "esbuild js/nocowoco.js --outdir=js --minify --allow-overwrite",
+    "build": "sass --style=compressed source/sass:css & tsc & esbuild js/nocowoco.js --outdir=js --minify --allow-overwrite"
   },
   "repository": {
     "type": "git",
