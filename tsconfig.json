@@ -1,0 +1,17 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "js"
+  },
+  "exclude": ["node_modules"],
+  "filesGlob": ["source/typescript/**/*.ts"]
+}

@@ -1,4 +1,5 @@
 # VS Code project settings
 .vscode/
-js/nocowoco.js
-css/nocowoco.css
+node_modules/
+**/*.css.map
+**/*.js.map

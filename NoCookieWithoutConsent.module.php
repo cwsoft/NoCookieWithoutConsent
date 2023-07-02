@@ -70,12 +70,12 @@ class NoCookieWithoutConsent extends WireData implements Module {
 	 */
 	private function addModuleFilesToHead(string $html) : string {
 		// Only proceed if module files exist.
-		if (!is_readable(__DIR__ . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'nocowoco.min.js')) return $html;
-		if (!is_readable(__DIR__ . DIRECTORY_SEPARATOR . 'css' . DIRECTORY_SEPARATOR . 'nocowoco.min.css')) return $html;
+		if (!is_readable(__DIR__ . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'nocowoco.js')) return $html;
+		if (!is_readable(__DIR__ . DIRECTORY_SEPARATOR . 'css' . DIRECTORY_SEPARATOR . 'nocowoco.css')) return $html;
 
 		// Inject required module CSS into pages <head> section.
-		$cssPath = basename(__DIR__) . '/css/nocowoco.min.css';
-		$jsPath = basename(__DIR__) . '/js/nocowoco.min.js';
+		$cssPath = basename(__DIR__) . '/css/nocowoco.css';
+		$jsPath = basename(__DIR__) . '/js/nocowoco.js';
 
 		$cssLink = "<link rel='stylesheet' type='text/css' href='{$this->config->urls->siteModules}{$cssPath}' />";
 		$jsLink = "<script defer src='{$this->config->urls->siteModules}{$jsPath}'></script>";

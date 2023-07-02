@@ -1,0 +1,62 @@
+#cc-wrapper {
+  z-index: 10;
+  position: fixed;
+  bottom: 2em;
+  right: 1em;
+  max-width: min(30em, 90vw);
+  width: 100%;
+  background: #fefefe;
+  border: 1px solid #aeaeae;
+  border-radius: 1em;
+  box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+  padding: 0 1em;
+  transition: all 0.5s ease-in;
+}
+
+.cc-heading {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cc-text {
+  font-size: normal;
+  line-height: 1.4;
+}
+
+.cc-buttons {
+  text-align: center;
+}
+
+.cc-buttons > button {
+  cursor: pointer;
+  padding: 0.5em 2em;
+  height: auto;
+}
+
+.cc-footer {
+  padding: 0;
+  margin: 1em 0;
+  font-size: smaller;
+  text-align: center;
+}
+
+.cc-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cc-footer li {
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.cc-footer li.cc-hidden {
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.cc-hidden {
+  display: none;
+}

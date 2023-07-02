@@ -7,7 +7,7 @@
 $info = array(
     'title' => 'NoCoWoCo - No Cookie Without Consent',
     'summary' => 'Disables wire frontend cookies until user consent to use required cookies.',
-    'version' => 1,
+    'version' => 2,
     'author' => 'cwsoft',
     'href' => 'https://github.com/cwsoft/pwNoCookieWithoutConsent',
     'requires' => 'PHP>=8.1',
