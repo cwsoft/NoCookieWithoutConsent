@@ -77,7 +77,7 @@ class NoCookieWithoutConsent {
   setCookie(expireDays: number = 7): void {
     // Set defaults if user declined cookies.
     let cookieValue = "decline_necessary";
-    let expireDate = "Thu, 01 Jan 1970 00:00:00 UTC";
+    let expireDate = expireDays < 0 ? "Thu, 01 Jan 1970 00:00:00 UTC" : 0;
 
     // Update values if user consent cookies.
     if (expireDays > 0) {
