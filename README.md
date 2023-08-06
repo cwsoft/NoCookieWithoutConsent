@@ -8,11 +8,11 @@ The consent cookie is stored for 30 days if user gave consent in order to hide t
 
 ## Installation
 
-Download Zip file from [Releases section](https://github.com/cwsoft/pwNoCookieWithoutConsent/releases) to your site/modules, unzip it and rename the module folder into **NoCookieWithoutConsent**. Alternatively you can clone the repository into your Processwire site/modules folder (recommended) via the following commands:
+Download Zip file from [Releases section](https://github.com/cwsoft/NoCookieWithoutConsent/releases) to your site/modules, unzip it and rename the module folder into **NoCookieWithoutConsent**. Alternatively you can clone the repository into your Processwire site/modules folder (recommended) via the following commands:
 
 ```
 cd /your_processwire_folder/site/modules
-git clone https://github.com/cwsoft/pwNoCookieWithoutConsent.git ./NoCookieWithoutConsent
+git clone https://github.com/cwsoft/NoCookieWithoutConsent.git ./NoCookieWithoutConsent
 ```
 
 Once the module files are copied in place, login to your ProcessWire backend and reload the modules. Afterwards the **NoCookieWithoutContent** module should show up in your backend ready to be installed by ProcessWire as usual. Once installed, log out of the backend, clear browser cookies and view a page to see the cookie consent dialogue in action.
