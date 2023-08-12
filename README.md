@@ -1,4 +1,4 @@
-# 🍪 NoCookieWithoutConsent
+# NoCookieWithoutConsent
 
 [ProcessWire](https://processwire.com) module to disable ProcessWire frontend cookie (wire) until user gave consent.
 
