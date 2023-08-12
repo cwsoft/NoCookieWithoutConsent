@@ -4,7 +4,7 @@
 
 Module hooks before `page::render` and adds a cookie consent dialogue consenting for technical required cookies. User can consent or decline using technical required cookies. The module sets `$config->sessionAllow=true` if a wire cookie already exists, the requested Url contains an admin path or the user gave consent using required cookies. This way frontend users can control if the ProcessWire cookie `wire` is set or not.
 
-The consent cookie is stored for 7 days if user gave consent in order to hide the cookie dialogue on subsequent visits unless the user or the browser deletes the cookie itself. If user declined using cookies, the preference is stored in a cookie till the browser session ends so the cookie dialogue will show up on subsequent visits.
+The consent cookie (nocowoco) is stored for 7 days if user gave consent in order to hide the cookie dialogue on subsequent visits unless the user or browser deletes the cookie. If user declined using cookies, the preference is stored in the cookie (nocowoco) till the browser session ends to ensure the cookie dialogue shows up on again on subsequent website visits.
 
 ## Installation
 
