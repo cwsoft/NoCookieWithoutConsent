@@ -1,6 +1,6 @@
 {
   "name": "nocookiewithoutconsent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "[ProcessWire](https://processwire.com) module to disable ProcessWire frontend cookie (wire) until user gave consent.",
   "keywords": [
     "ProcessWire",
