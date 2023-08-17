@@ -6,3 +6,7 @@ Consent,Zustimmen,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDi
 Decline,Ablehnen,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,0d3627289b893d3eea08e52589ed06ae
 Imprint,Impressum,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,e206d098296c1966e2d01130f9195744
 "Privacy policy",Datenschutzerklärung,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,56c34c6410dd45c5cec44149ad0ce037
+"Imprint URL segment","Url Segment Impressum",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,aff694060cb7f491478c5604c8e4ff09
+"URL segment to imprint page. Blank if not used.","Url Segment zur Impressum Seite. Leer lassen wenn nicht genutzt.",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,751d5af7df0a4abc9217d05f77bf303c
+"Privacy policy URL segment","Url Segment Datenschutzerklärung",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,ae6888f07dd1e1444d0e901425638e38
+"URL segment to privacy policy page. Blank if not used.","Url Segment zur Datenschutzerklärung. Leer lassen wenn nicht genutzt.",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,d91ee8bd3446faeef11b783d392b9a87

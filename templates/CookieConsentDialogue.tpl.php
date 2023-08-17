@@ -1,17 +1,22 @@
-<?php namespace ProcessWire;
+<?php
+
+namespace ProcessWire;
+
 /**
  * Template: CookieConsentDialogue.tpl.php.
  * HTML template for the Cookie Consent dialogue.
  */
-// Adapt pathes to show imprint and privacy policy pages as link.
-$imprintUrl = pages()->findOne('impressum')->url;
-$privacyPolicyUrl = pages()->findOne('datenschutz')->url;
-
-// Hide imprint and privacy policy links if pages don't exist.
+// Work out if imprint and privacy policy page links should be displayed.
+// Url segments can be set in module configuration in the backend.
+$imprintUrlSegment = sanitizer()->selectorValue(modules()->get('NoCookieWithoutConsent')->imprintUrlSegment);
+$imprintUrl = empty($imprintUrlSegment) ? '' : pages()->findOne($imprintUrlSegment)->url;
 $imprintClass = empty($imprintUrl) ? ' class="cc-hidden"' : '';
+
+$privacyPolicySegment = sanitizer()->selectorValue(modules()->get('NoCookieWithoutConsent')->privacyPolicyUrlSegment);
+$privacyPolicyUrl = empty($privacyPolicySegment) ? '' : pages()->findOne('datenschutz')->url;
 $privacyPolicyClass = empty($privacyPolicyUrl) ? ' class="cc-hidden"' : '';
 
-
+// HTML template for the Cookie Consent dialogue.
 $template = "
 <section id='cc-wrapper' class='cc-hidden'>
     <h2 class='cc-heading'>" . sprintf(__('Cookie Consent')) . "</h2>

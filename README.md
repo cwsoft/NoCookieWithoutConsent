@@ -4,7 +4,7 @@
 
 Module hooks before `page::render` and adds a cookie consent dialogue consenting for technical required cookies. User can consent or decline using technical required cookies. The module sets `$config->sessionAllow=true` if a wire cookie already exists, the requested Url contains an admin path or the user gave consent using required cookies. This way frontend users can control if the ProcessWire cookie `wire` will be set or not.
 
-The consent cookie (nocowoco) is stored for 7 days if user gave consent in order to hide the cookie dialogue on subsequent visits unless the user or browser deletes the cookie. If user declined using cookies, the preference is stored in the cookie nocowoco till the browser session ends. This ensures the cookie dialogue stays hidden for the actual session, but shows up again on subsequent website visits after browser was closed. 
+The consent cookie (nocowoco) is stored for 7 days if user gave consent in order to hide the cookie dialogue on subsequent visits unless the user or browser deletes the cookie. If user declined using cookies, the preference is stored in the cookie nocowoco till the browser session ends. This ensures the cookie dialogue stays hidden for the actual session, but shows up again on subsequent website visits after browser was closed.
 
 ## Installation
 
@@ -21,18 +21,13 @@ Once the module files are copied in place, login to your ProcessWire backend and
 
 ### Style Cookie Consent Dialogue
 
-You can style the Cookie Consent Dialogue by adapting the template file `CookieConsentDialogue.tpl.php` and the corresponding CSS and Javascript files. If you want to show links to your imprint and privacy policy page, specify the pathes at the top of the template file. The default values are shown below.
-
-```PHP
-$imprintUrl = pages()->findOne('impressum')->url;
-$privacyPolicyUrl = pages()->findOne('datenschutz')->url;
-```
+You can style the Cookie Consent Dialogue by adapting the template file `CookieConsentDialogue.tpl.php` and the corresponding CSS and Javascript files. If you want to show links to your imprint and privacy policy page, specify the corresponding Url segments in the module backend. By default no links to imprint and policy pages are shown unless you specify them yourself.
 
 ### Language files
 
 By default this module ships with an English and German language file. If you want to add another language, please follow the translation steps described in the [Helloworld module](https://processwire.com/modules/helloworld/) by Ryan Cramer.
 
-Apart from the styling of the cookie consent dialogue and the links to imprint and privacy policy pages in the template file, no further customizations are available. Idea was to keep this module as clean and lean as possible. If you need additional features or want to customize stuff to your needs, you may want to check out other Cookie modules available in the official [ProcessWire modules catalog](https://processwire.com/search/?q=cookie&t=Modules).
+Apart from the styling of the cookie consent dialogue and providing links to your imprint and privacy policy pages via the module backend, no further customizations are yet available. Idea was to keep this module as clean and lean as possible. If you need additional features or want to customize stuff to your needs, you may want to check out other Cookie modules available in the official [ProcessWire modules catalog](https://processwire.com/search/?q=cookie&t=Modules).
 
 Have fun
 cwsoft
