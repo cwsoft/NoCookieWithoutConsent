@@ -13,7 +13,7 @@ $imprintUrl = empty($imprintUrlSegment) ? '' : pages()->findOne($imprintUrlSegme
 $imprintClass = empty($imprintUrl) ? ' class="cc-hidden"' : '';
 
 $privacyPolicySegment = sanitizer()->selectorValue(modules()->get('NoCookieWithoutConsent')->privacyPolicyUrlSegment);
-$privacyPolicyUrl = empty($privacyPolicySegment) ? '' : pages()->findOne('datenschutz')->url;
+$privacyPolicyUrl = empty($privacyPolicySegment) ? '' : pages()->findOne($privacyPolicySegment)->url;
 $privacyPolicyClass = empty($privacyPolicyUrl) ? ' class="cc-hidden"' : '';
 
 // HTML template for the Cookie Consent dialogue.
