@@ -12,7 +12,7 @@ Download latest module zip file via [Download button](https://processwire.com/mo
 
 ```
 cd /your_processwire_folder/site/modules
-git clone https://github.com/cwsoft/NoCookieWithoutConsent.git ./NoCookieWithoutConsent
+git clone https://github.com/cwsoft/NoCookieWithoutConsent.git
 ```
 
 Once the module files are copied in place, login to your ProcessWire backend and reload the modules. Afterwards the **NoCookieWithoutConsent** module should show up in your backend ready to be installed by ProcessWire as usual. Once installed, log out of the backend, clear browser cookies and view a page to see the cookie consent dialogue in action.
