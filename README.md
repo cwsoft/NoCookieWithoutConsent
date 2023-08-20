@@ -1,8 +1,8 @@
 # NoCookieWithoutConsent
 
-[ProcessWire module](https://processwire.com/modules/no-cookie-without-consent/) to disable the ProcessWire frontend cookie (wire) until user gave consent.
+[ProcessWire](https://processwire.com) module to disable the ProcessWire frontend cookie `wire` until user gave his consent.
 
-Module hooks before `page::render` to show a cookie consent dialogue consenting the user for technical required cookies. User can consent or decline using technical required cookies. The module sets `$config->sessionAllow=true` if a wire cookie already exists, the requested Url contains an admin path or the user gave consent using required cookies. This way frontend users can control if the ProcessWire cookie `wire` will be set or not.
+Module hooks before `page::render` to show a cookie consent dialogue consenting the user allowing technical required cookies. User can accept or decline using technical required cookies. The module sets `$config->sessionAllow=true` if a wire cookie already exists, the requested Url contains an admin path or the user gave consent using required cookies. This way frontend users can control if the ProcessWire cookie `wire` will be set or not.
 
 The consent cookie (nocowoco) is stored for 7 days if user gave consent in order to hide the cookie dialogue on subsequent visits unless the cookie is deleted by the user or the browser. If the user declined using cookies, the preference is stored in the cookie nocowoco till the end of the browser session. This ensures the cookie dialogue stays hidden for the actual session, but will show up again on subsequent website visits after the browser was closed.
 
