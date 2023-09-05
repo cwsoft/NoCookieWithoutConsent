@@ -1,6 +1,6 @@
 en,default,description,file,hash
 "Cookie Consent",Cookie-Richtlinien,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,94977ddb4a0578596dfe9e45511d7422
-"This site uses required cookies to work properly.","Diese Webseite nutzt technisch notwendige Cookies zur Verarbeitung von Formulardaten.",,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,098e6636d03b482a7f09a6f394559b2e
+"This site uses required cookies to work properly.","Diese Webseite nutzt technisch notwendige Cookies.",,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,098e6636d03b482a7f09a6f394559b2e
 "Please consent required cookies in order to use all features.","Bitte Cookie-Nutzung zustimmen um alle Funktionen nutzen zu können.",,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,3d7a347299d794a6dfdbff8bd91d9494
 Close,Schließen,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,d3d2e617335f08df83599665eef8a418
 Decline,Ablehnen,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,0d3627289b893d3eea08e52589ed06ae
