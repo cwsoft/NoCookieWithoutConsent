@@ -2,15 +2,17 @@ en,default,description,file,hash
 "Cookie Consent",Cookie-Richtlinien,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,94977ddb4a0578596dfe9e45511d7422
 "This site uses required cookies to work properly.","Diese Webseite nutzt technisch notwendige Cookies zur Verarbeitung von Formulardaten.",,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,098e6636d03b482a7f09a6f394559b2e
 "Please consent required cookies in order to use all features.","Bitte Cookie-Nutzung zustimmen um alle Funktionen nutzen zu können.",,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,3d7a347299d794a6dfdbff8bd91d9494
-Decline,Ablehnen,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,0d3627289b893d3eea08e52589ed06ae
 Close,Schließen,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,d3d2e617335f08df83599665eef8a418
+Decline,Ablehnen,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,0d3627289b893d3eea08e52589ed06ae
 Consent,Zustimmen,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,1bbdf136f897ea2075a786bd05152095
 Imprint,Impressum,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,e206d098296c1966e2d01130f9195744
 "Privacy policy",Datenschutzerklärung,,site/modules/NoCookieWithoutConsent/templates/CookieConsentDialogue.tpl.php,56c34c6410dd45c5cec44149ad0ce037
-"Imprint URL segment","Url Segment Impressum",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,aff694060cb7f491478c5604c8e4ff09
-"URL segment to imprint page. Blank if not used.","Url Segment zur Impressum Seite. Leer lassen wenn nicht genutzt.",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,751d5af7df0a4abc9217d05f77bf303c
-"Privacy policy URL segment","Url Segment Datenschutzerklärung",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,ae6888f07dd1e1444d0e901425638e38
-"URL segment to privacy policy page. Blank if not used.","Url Segment zur Datenschutzerklärung. Leer lassen wenn nicht genutzt.",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,d91ee8bd3446faeef11b783d392b9a87
-"Extra buttons shown in consent dialogue","Zusätzlich angezeigte Schaltflächen",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,932306a2c48db4e6b4d15b5e86e33d73
-Decline,Ablehnen,,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,0d3627289b893d3eea08e52589ed06ae
-Close,Schließen,,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,d3d2e617335f08df83599665eef8a418
+"Imprint URL segment","Url-Segment Impressum",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,aff694060cb7f491478c5604c8e4ff09
+"URL segment to imprint page. Blank if not used.","Url-Segment zur Impressum Seite. Leer lassen wenn nicht genutzt.",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,751d5af7df0a4abc9217d05f77bf303c
+"Privacy policy URL segment","Url-Segment Datenschutzerklärung",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,ae6888f07dd1e1444d0e901425638e38
+"URL segment to privacy policy page. Blank if not used.","Url-Segment zur Datenschutzerklärung. Leer lassen wenn nicht genutzt.",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,d91ee8bd3446faeef11b783d392b9a87
+"Cookie dialoge buttons shown","Angezeigte Cookie-Schaltflächen",,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,a2d8de11e7b7568fb02f48b6f50808c3
+Consent,Zustimmen,,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,1bbdf136f897ea2075a786bd05152095
+Consent+Decline,Zustimmen+Ablehnen,,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,ac1154d3709ada28fa09f8417183919c
+Consent+Close,Zustimmen+Schließen,,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,d2d6d7b90f99b4b44880871b7017262a
+Consent+Decline+Close,Zustimmen+Ablehnen+Schließen,,site/modules/NoCookieWithoutConsent/NoCookieWithoutConsentConfig.php,ff1ab5e4454b5747eb1e2e78266b4f69

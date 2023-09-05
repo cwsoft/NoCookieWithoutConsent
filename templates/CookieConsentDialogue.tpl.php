@@ -15,10 +15,10 @@ $privacyPolicySegment = sanitizer()->selectorValue(modules()->get('NoCookieWitho
 $privacyPolicyUrl = empty($privacyPolicySegment) ? '' : pages()->findOne($privacyPolicySegment)->url;
 $privacyPolicyClass = empty($privacyPolicyUrl) ? ' class="cc-hidden"' : '';
 
-// Work out which extra buttons should be displayed.
-$extraButtonsToShow = modules()->get('NoCookieWithoutConsent')->extraButtonsToShow;
-$declineButtonClass = $extraButtonsToShow === 'decline' || $extraButtonsToShow === 'declineAndClose' ? '' : ' class="cc-hidden"';
-$closeButtonClass = $extraButtonsToShow === 'close' || $extraButtonsToShow === 'declineAndClose' ? '' : ' class="cc-hidden"';
+// Work out cookie dialoge buttons to show.
+$dialogeButtons = modules()->get('NoCookieWithoutConsent')->cookieDialogeButtons;
+$declineButtonClass = strpos($dialogeButtons, 'decline') > -1 ? '' : ' class="cc-hidden"';
+$closeButtonClass = strpos($dialogeButtons, 'close') > -1 ? '' : ' class="cc-hidden"';
 
 // HTML template for the Cookie Consent dialogue.
 $template = "
@@ -31,8 +31,8 @@ $template = "
     </p>
 
     <div class='cc-buttons'>
-        <button id='cc-decline'{$declineButtonClass}>" . sprintf(__('Decline')) . "</button>
         <button id='cc-close'{$closeButtonClass}>" . sprintf(__('Close')) . "</button>
+        <button id='cc-decline'{$declineButtonClass}>" . sprintf(__('Decline')) . "</button>
         <button id='cc-consent'>" . sprintf(__('Consent')) . "</button>
     </div>
 
