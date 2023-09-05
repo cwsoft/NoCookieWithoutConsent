@@ -21,13 +21,13 @@ Once the module files are copied in place, login to your ProcessWire backend and
 
 ### Style Cookie Consent Dialogue
 
-You can style the Cookie Consent Dialogue by adapting the template file `CookieConsentDialogue.tpl.php` and the corresponding CSS and Javascript files. If you want to show links to your imprint and privacy policy page, specify the corresponding Url segments in the module backend. By default no links to imprint and policy pages are shown unless you specify them yourself.
+You can style the Cookie Consent Dialogue by adapting the template file `CookieConsentDialogue.tpl.php` and the corresponding CSS and Javascript files. If you want to show links to your imprint and privacy policy page, specify the corresponding Url segments in the module backend. By default no links to imprint and policy pages are shown unless you specify them yourself. You can specify if you want to render the optional buttons 'Decline' and 'Close' in the cookie dialogue via a dropdown menu in the module backend.
 
 ### Language files
 
 By default this module ships with an English and German language file. If you want to add another language, please follow the translation steps described in the [Helloworld module](https://processwire.com/modules/helloworld/) by Ryan Cramer.
 
-Apart from the styling of the cookie consent dialogue and providing links to your imprint and privacy policy pages via the module backend, no further customizations are yet available. Idea was to keep this module as clean and lean as possible. If you need additional features or want to customize stuff to your needs, you may want to check out other Cookie modules available in the official [ProcessWire modules catalog](https://processwire.com/search/?q=cookie&t=Modules).
+Apart from the styling of the cookie consent dialogue, providing links to your imprint and privacy policy pages and the option to render the optional buttons 'Decline' and 'Close' via the module backend, no further customizations are yet available. Idea was to keep this module as clean and lean as possible. If you need additional features or want to customize stuff to your needs, you may want to check out other Cookie modules available in the official [ProcessWire modules catalog](https://processwire.com/search/?q=cookie&t=Modules).
 
 Have fun
 cwsoft

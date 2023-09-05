@@ -7,7 +7,6 @@ namespace ProcessWire;
  * HTML template for the Cookie Consent dialogue.
  */
 // Work out if imprint and privacy policy page links should be displayed.
-// Url segments can be set in module configuration in the backend.
 $imprintUrlSegment = sanitizer()->selectorValue(modules()->get('NoCookieWithoutConsent')->imprintUrlSegment);
 $imprintUrl = empty($imprintUrlSegment) ? '' : pages()->findOne($imprintUrlSegment)->url;
 $imprintClass = empty($imprintUrl) ? ' class="cc-hidden"' : '';
@@ -16,18 +15,25 @@ $privacyPolicySegment = sanitizer()->selectorValue(modules()->get('NoCookieWitho
 $privacyPolicyUrl = empty($privacyPolicySegment) ? '' : pages()->findOne($privacyPolicySegment)->url;
 $privacyPolicyClass = empty($privacyPolicyUrl) ? ' class="cc-hidden"' : '';
 
+// Work out which extra buttons should be displayed.
+$extraButtonsToShow = modules()->get('NoCookieWithoutConsent')->extraButtonsToShow;
+$declineButtonClass = $extraButtonsToShow === 'decline' || $extraButtonsToShow === 'declineAndClose' ? '' : ' class="cc-hidden"';
+$closeButtonClass = $extraButtonsToShow === 'close' || $extraButtonsToShow === 'declineAndClose' ? '' : ' class="cc-hidden"';
+
 // HTML template for the Cookie Consent dialogue.
 $template = "
 <section id='cc-wrapper' class='cc-hidden'>
     <h2 class='cc-heading'>" . sprintf(__('Cookie Consent')) . "</h2>
+    <button id='cc-close-icon'>x</button>
     <p class='cc-text'>
         " . sprintf(__('This site uses required cookies to work properly.')) . "
         " . sprintf(__('Please consent required cookies in order to use all features.')) . "
     </p>
 
     <div class='cc-buttons'>
+        <button id='cc-decline'{$declineButtonClass}>" . sprintf(__('Decline')) . "</button>
+        <button id='cc-close'{$closeButtonClass}>" . sprintf(__('Close')) . "</button>
         <button id='cc-consent'>" . sprintf(__('Consent')) . "</button>
-        <button id='cc-decline'>" . sprintf(__('Decline')) . "</button>
     </div>
 
     <footer class='cc-footer'>

@@ -15,6 +15,7 @@ class NoCookieWithoutConsentConfig extends ModuleConfig {
         return array(
             'imprintUrlSegment' => '',
             'privacyPolicyUrlSegment' => '',
+            'extraButtonsToShow' => 'decline'
         );
     }
 
@@ -35,6 +36,16 @@ class NoCookieWithoutConsentConfig extends ModuleConfig {
         $f->attr('name', 'privacyPolicyUrlSegment');
         $f->label = $this->_('Privacy policy URL segment');
         $f->placeholder = $this->_('URL segment to privacy policy page. Blank if not used.');
+        $inputFields->add($f);
+
+        $f = $this->modules->get('InputfieldSelect');
+        $f->attr('name', 'extraButtonsToShow');
+        $f->label = $this->_('Extra buttons shown in consent dialogue');
+        $f->options = array(
+            'decline' => __('Decline'),
+            'close' => __('Close'),
+            'declineAndClose' => __('Decline') . ' + ' . __('Close')
+        );
         $inputFields->add($f);
 
         return $inputFields;

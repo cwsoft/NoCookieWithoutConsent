@@ -10,52 +10,63 @@ document.addEventListener("DOMContentLoaded", () => new NoCookieWithoutConsent()
 
 class NoCookieWithoutConsent {
   divWrapper: HTMLElement | null = null;
+  btnCloseIcon: HTMLButtonElement | null = null;
   btnConsent: HTMLButtonElement | null = null;
+  btnClose: HTMLButtonElement | null = null;
   btnDecline: HTMLButtonElement | null = null;
+  btnElements: HTMLButtonElement[] = [];
 
   init(): void {
-    // Get required HTML DOM elements.
+    // Get required HTML elements from DOM.
     this.divWrapper = document.querySelector("#cc-wrapper");
+    this.btnCloseIcon = document.querySelector("#cc-close-icon");
     this.btnConsent = document.querySelector("#cc-consent");
+    this.btnClose = document.querySelector("#cc-close");
     this.btnDecline = document.querySelector("#cc-decline");
 
-    // Stop processing if a required HTML element is missing.
-    if (!(this?.divWrapper && this?.btnConsent && this?.btnDecline)) {
-      console.error("NoCoWoCo: Missing at least one required HTML element: '#cc-wrapper, #cc-consent, #cc-decline'.");
+    // Ensure all required HTML elements are defined in the template.
+    if (!(this?.divWrapper && this?.btnCloseIcon && this?.btnConsent && this?.btnClose && this?.btnDecline)) {
+      console.error(
+        "NoCoWoCo: Missing at least one required HTML element: '#cc-wrapper, #cc-close-icon, #cc-consent, #cc-close, #cc-decline'."
+      );
       return;
     }
 
-    // Display consent dialogue if no 'nocowoco' cookie yet exists.
+    // Ensure consent dialogue is shown if no 'nocowoco' cookie yet exists.
     if (this.getCookie("nocowoco") === "") {
       this.divWrapper?.classList?.remove("cc-hidden");
     }
 
-    // Register consent button click handler.
-    this.btnConsent?.addEventListener("click", (event: Event) => {
-      this.process(event);
-      // Reload page after consent was given so Cookie gets recognized.
-      setTimeout(() => {
-        location.reload();
-      }, 500);
-    });
+    // Add interactive button elements into array for easier processing.
+    this.btnElements = [this.btnCloseIcon, this.btnConsent, this.btnClose, this.btnDecline];
 
-    // Register decline button click handler.
-    this.btnDecline?.addEventListener("click", (event: Event) => this.process(event));
+    // Register click event handler for all interactive buttons.
+    this.btnElements.forEach((element) => {
+      element.addEventListener("click", (event: Event) => this.process(event));
+    });
   }
 
   process(event: Event): void {
     // Ensure clicked element is a valid 'nocowoco' button.
     const btnElement = event?.target as HTMLButtonElement;
-    if (btnElement?.id !== "cc-consent" && btnElement?.id !== "cc-decline") return;
+    if (["cc-close-icon", "cc-consent", "cc-close", "cc-decline"].indexOf(btnElement?.id) < 0) return;
 
-    // Set cookie expiry date to 7 days on consent, or end of browser session on decline.
-    const expireDays = btnElement.id == "cc-consent" ? 7 : 0;
+    // Set cookie expiry date to 7 days on consent, expired on close or end of browser session on decline.
+    const expireDays = btnElement.id == "cc-consent" ? 7 : btnElement.id.startsWith("cc-close") ? -1 : 0;
     this.setCookie(expireDays);
 
-    // Hide cookie consent dialogue and unregister button event listener.
+    // Hide cookie consent dialogue once nocowoco cookie was set.
     this.divWrapper?.classList.add("cc-hidden");
-    this.btnConsent?.removeEventListener("click", this.process, false);
-    this.btnDecline?.removeEventListener("click", this.process, false);
+
+    // Hide cookie consent dialogue and unregister button event listener.
+    this.btnElements.forEach((element) => {
+      element?.removeEventListener("click", this.process, false);
+    });
+
+    // Reload page if consent button was clicked to refresh cookies.
+    if (btnElement.id == "cc-consent") {
+      location.reload();
+    }
   }
 
   getCookie(cookieName: string): string {
